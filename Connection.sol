@@ -37,9 +37,27 @@ contract connection is mortal {
                 for (uint i = 0; i < MAX_MESSAGES - 1; i++)
                     messages[i] = messages[i + 1];
                 messages.length--;
-                
+
             }
             messages.push(Message(owner, txt));
         }
     }
+
+    function isMember(address person) public view returns(bool) {
+        for (uint i = 0; i < members.length; i++) {
+            if  (members[i] == person) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function giveRightToPost(address poster) view public {
+        require(isMember(poster));
+    }
+
+    function giveRightToReadPost(address reader) view public {
+        require(isMember(reader));
+    }
+
 }
