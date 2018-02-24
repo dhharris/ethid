@@ -5,5 +5,4 @@ if ! [ ${#files[@]} -gt 0 ]
 then
     geth --datadir=./datadir init genesis.json
 fi
-geth --datadir=./datadir console
-
+geth --datadir=./datadir --unlock db0fe2107383d64a120652f63162e11780eb46db console
