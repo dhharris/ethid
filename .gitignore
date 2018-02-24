@@ -1,3 +1,5 @@
-datadir/*
+datadir/geth
+datadir/history
 caches/*
 target/*
+.DS_Store

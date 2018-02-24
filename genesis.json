@@ -8,8 +8,8 @@
     "gasLimit": "210000",
     "difficulty": "20000",
     "alloc" : {
-        "cf834df7219dc8332ce79860905afbae9fe2d06b": {
-            "balance": "10000"
+        "db0fe2107383d64a120652f63162e11780eb46db": {
+            "balance": "10000000"
         }
     }
 }
