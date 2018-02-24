@@ -43,6 +43,11 @@ contract connection is mortal {
         }
     }
 
+    function getMessages() public view returns(Message[]) {
+        if (isMember(owner))
+            return messages;
+    }
+
     function isMember(address person) public view returns(bool) {
         for (uint i = 0; i < members.length; i++) {
             if  (members[i] == person) {
