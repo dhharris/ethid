@@ -43,6 +43,10 @@ contract connection is mortal {
         }
     }
 
+    function numMessages() public view returns(uint) {
+        return messages.length;
+    }
+
     function getMessage(uint i) public view returns(address, string) {
         if (isMember(owner)) {
             Message storage m = messages[i];
