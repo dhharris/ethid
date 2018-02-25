@@ -68,3 +68,31 @@ contract connection is mortal {
     }
 
 }
+
+contract ptop is connection {
+    bool isPrivate;
+
+    function ptop() connection() public {
+        isPrivate = false;
+    }
+
+    function addMember(address id) public {
+        if (isPrivate) {
+            if (isMember(owner))
+                members.push(id);
+            else
+                return;
+        }
+        members.push(id);
+    }
+
+    function setPrivate() public {
+        if (isMember(owner))
+            isPrivate = true; 
+    }
+
+    function setPublic() public {
+        if (isMember(owner))
+            isPrivate = false;
+    }
+}
