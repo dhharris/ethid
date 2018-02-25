@@ -1,5 +1,5 @@
 # ethid
-Centralized user profiles on ethereum's social network
+Distributed messaging service on the Ethereum network
 
 ## Introduction
 ethid allows for people on the Ethereum blockchain to interact with one another through peer-to-peer messaging and a community chat room. It is a decentralized chat application that doesn't rely on a third party to send and receive messages. It is persistent, so that messages may be viewed at your convenience. 
