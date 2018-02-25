@@ -4,7 +4,7 @@ Centralized user profiles on ethereum's social network
 ## Introduction
 ethid allows for people on the Ethereum blockchain to interact with one another through peer-to-peer messaging and a community chat room. It is a decentralized chat application that doesn't rely on a third party to send and receive messages. It is persistent, so that messages may be viewed at your convenience. 
 
-### Chat wall
+### Ethereum Wall
 The public wall is a single smart contract deployed by the developers. It contains the last 100 messages posted by members, and anyone is free to join.
 
 ### Peer-to-Peer
