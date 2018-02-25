@@ -1,6 +1,6 @@
 #!/bin/bash
 shopt -s nullglob dotglob
-files=(./datadir/geth/*)
+files=(./datadir/geth/chaindata/*)
 if ! [ ${#files[@]} -gt 0 ]
 then
     geth --datadir=./datadir init genesis.json

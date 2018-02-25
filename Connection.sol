@@ -21,13 +21,16 @@ contract connection is mortal {
     string message;
     address[] members;
     Message[] messages;
+    mapping (address => int) lastSeenMessage;
 
     function connection() public {
         members.push(owner);
+        lastSeenMessage[owner] = -1;
     }
 
     function addMember(address id) public {
         members.push(id);
+        lastSeenMessage[id] = -1;
     }
 
     function newMessage(string txt) public {
@@ -50,6 +53,16 @@ contract connection is mortal {
     function getMessage(uint i) public view returns(address, string) {
         if (isMember(owner)) {
             Message storage m = messages[i];
+            return (m.sender, m.text);
+        }
+    }
+
+    function getUnseenMessage() public view returns(address, string) {
+        if (isMember(owner)) {
+            int i = lastSeenMessage[owner];
+            if (i == int(numMessages() - 1))
+                return (0, "No unseen messages");
+            Message storage m = messages[uint(i++)];
             return (m.sender, m.text);
         }
     }

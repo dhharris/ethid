@@ -1,1 +1,1 @@
-rm -rf ./datadir/geth
+geth --datadir=./datadir removedb
