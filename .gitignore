@@ -3,3 +3,4 @@ datadir/history
 caches/*
 target/*
 .DS_Store
+*.swp
