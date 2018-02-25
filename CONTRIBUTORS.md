@@ -3,7 +3,7 @@
 * Back-end development
 * Local testing
 
-[Mike Myers](https://github.com/emmnm) (mmeyer2@illinois.edu)
+[Mike Meyer](https://github.com/emmnm) (mmeyer2@illinois.edu)
 * Back-end development
 * Deployed smart contract
 
